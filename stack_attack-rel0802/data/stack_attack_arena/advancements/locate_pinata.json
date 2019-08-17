@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"golden_horse_armor",
+      "nbt":"{display:{Name:'\"locate pinata logo\"'}}"
+    },
+    "title":"Not Made Of Paper",
+    "description":{
+      "text":"Locate Piñata",
+      "color":"gray"
+    }
+  },
+  "parent":"stack_attack_arena:root",
+  "criteria":{
+    "stack_attack_locate_pinata":{
+    "trigger":"minecraft:impossible"
+    }
+  }
+}

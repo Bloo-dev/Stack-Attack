@@ -1,0 +1,19 @@
+{
+  "display":{
+    "icon":{
+      "item":"yellow_concrete_powder",
+      "nbt":"{display:{Name:'\"Stack Attack Logo\"'}}"
+    },
+    "title":"Ready, Set, Stack!",
+    "description":{
+      "text":"Play your first game of Stack Attack.",
+      "color":"gray"
+    },
+    "background":"textures/block/yellow_concrete_powder.png"
+  },
+  "criteria":{
+    "stack_attack_play":{
+      "trigger":"minecraft:impossible"
+    }
+  }
+}
