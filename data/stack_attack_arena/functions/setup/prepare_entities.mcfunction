@@ -30,9 +30,9 @@ spreadplayers ~7.5 ~7.5 1 5 false @a[tag=sat_joining_game]
 # effect players with buffs, equip jackets, replace sat_joining_game and sat_waiting_for_game with sat_in_game
 execute as @a[tag=sat_joining_game] run function stack_attack_arena:setup/prepare_players
 
-# store match size onto arena marker entity
-scoreboard players operation @s sat_match_size = players_in_arena sat_match_size
-scoreboard players reset players_in_arena sat_match_size
+# store match value onto arena marker AEC
+scoreboard players operation @s sat_match_value = match_value sat_match_value
+scoreboard players reset match_value sat_match_value
 
 #====== Players now just have the sat_in_game tag ======
 

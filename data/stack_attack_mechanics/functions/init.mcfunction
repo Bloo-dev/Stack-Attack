@@ -13,7 +13,7 @@ scoreboard objectives add sat_arena_state dummy
 scoreboard objectives add sat_round_timer dummy
 scoreboard objectives add sat_leaderboard dummy [{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"}]
 scoreboard objectives add sat_hunger food
-scoreboard objectives add sat_match_size dummy
+scoreboard objectives add sat_match_value dummy
 scoreboard objectives add sat_deaths deathCount
 scoreboard objectives add sat_quit_game minecraft.custom:minecraft.leave_game
 scoreboard objectives add sat_totem minecraft.used:minecraft.totem_of_undying

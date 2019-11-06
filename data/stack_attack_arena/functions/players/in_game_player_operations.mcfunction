@@ -9,7 +9,7 @@ effect give @s[scores={sat_hunger=..10}] saturation 2 0 true
 effect give @s minecraft:weakness 12 5 true
 
 # count players in arena (executes this for each player in the arena)
-scoreboard players add players_in_arena sat_match_size 1
+scoreboard players add players_in_arena sat_match_value 1
 
 # check for existence of an off-hand item
 execute if entity @s[nbt={Inventory:[{Slot:-106b}]}] run function stack_attack_arena:powerups/check_players

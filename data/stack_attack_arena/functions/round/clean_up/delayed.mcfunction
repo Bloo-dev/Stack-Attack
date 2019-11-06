@@ -13,8 +13,8 @@ kill @e[type=item,dx=14,dy=255,dz=14]
 # clear blocks ===== THIS IS THE REASON WHY AN ARENA MUST BE ABOVE Y=62
 fill ~1 ~ ~1 ~13 255 ~13 air
 
-# reset sat_match_size
-scoreboard players reset @s sat_match_size
+# reset sat_match_value
+scoreboard players reset @s sat_match_value
 
 # reset sat_arena_state
 scoreboard players set @s sat_arena_state 0

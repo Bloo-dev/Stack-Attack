@@ -4,18 +4,18 @@
 # called by stack_attack_arena:round/timer
 
 # grant saturation to hungry players and check for selected off-hand power up. Also counts players in the arena
-scoreboard players set players_in_arena sat_match_size 0
+scoreboard players set players_in_arena sat_match_value 0
 execute as @a[tag=sat_in_game,dx=14,dy=255,dz=14] run function stack_attack_arena:players/in_game_player_operations
-# -> amount of players in arena is now stored in players_in_arena sat_match_size
+# -> amount of players in arena is now stored in players_in_arena sat_match_value
 
 # emergency condition: kill all participating players in the region above y=250
 execute positioned ~ 250 ~ run kill @a[tag=sat_in_game,dx=14,dy=5,dz=14]
 
 # update sat_arena_state to 3 ("ended") in case there is just one player left === WIN CONDITION ===
-execute if score players_in_arena sat_match_size matches ..1 run scoreboard players set @s sat_arena_state 3
+execute if score players_in_arena sat_match_value matches ..1 run scoreboard players set @s sat_arena_state 3
 
 # reset fake players
-scoreboard players reset players_in_arena sat_match_size
+scoreboard players reset players_in_arena sat_match_value
 
 # control drop timer
 execute if score @s sat_drop_timer matches 0 run function stack_attack_arena:blocks/drop_timer_control

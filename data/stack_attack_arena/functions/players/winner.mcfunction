@@ -4,8 +4,8 @@
 
 # apply gained points
 scoreboard players operation @s sat_leaderboard += points_gained sat_data
-execute if entity @s[tag=sat_payed_fee] run scoreboard players operation points_gained sat_data -= #1 sat_data
-tag @s remove sat_payed_fee
+scoreboard players operation points_gained sat_data -= @s sat_match_value
+scoreboard players reset @s sat_match_value
 
 # announcements
 execute if score points_gained sat_data matches 1.. run function stack_attack_arena:players/announcements/winner/gained_points

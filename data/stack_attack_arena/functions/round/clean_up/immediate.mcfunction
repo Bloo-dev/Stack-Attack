@@ -9,8 +9,8 @@ execute if score @s sat_round_timer matches 350.. run scoreboard players set sum
 # set round timer to a high value
 scoreboard players set @s sat_round_timer 30000
 
-# store score gain into fake player
-scoreboard players operation points_gained sat_data = @s sat_match_size
+# get initial match value into fake player
+scoreboard players operation points_gained sat_data = @s sat_match_value
 
 # handle winner
 execute as @a[tag=sat_in_game,dx=14,dy=255,dz=14,limit=1,sort=arbitrary] at @s run function stack_attack_arena:players/winner

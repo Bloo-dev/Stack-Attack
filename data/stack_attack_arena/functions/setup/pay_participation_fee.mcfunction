@@ -2,11 +2,17 @@
 # at the arena marker's location
 # called by stack_attack_arena:setup/prepare_players
 
-# add 1 to total match size
-scoreboard players add players_in_arena sat_match_size 1
+# calculate participation cost
+scoreboard players operation participation_fee sat_match_value = @s sat_leaderboard
+scoreboard players operation participation_fee sat_match_value /= #10 sat_data
+scoreboard players add participation_fee sat_match_value 1
+
+# add participation cost to match value
+#scoreboard players add match_value sat_match_value 2
+scoreboard players operation match_value sat_match_value += participation_fee sat_match_value
 
 # pay the fee
-scoreboard players remove @s sat_leaderboard 1
+scoreboard players operation @s sat_leaderboard -= participation_fee sat_match_value
 
-# remember this
-tag @s add sat_payed_fee
+# store value of payed fee
+scoreboard players operation @s sat_match_value = participation_fee sat_match_value
