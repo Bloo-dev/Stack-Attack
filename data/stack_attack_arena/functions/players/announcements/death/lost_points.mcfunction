@@ -3,4 +3,4 @@
 # called by stack_attack_arena:players/leave_arena or /quit_game or /death
 
 # tellraw
-tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You lost a point on the leaderboard!","color":"red"}]
+tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You lost ","color":"red"},{"score":{"name":"@s","objective":"sat_match_value"},"color":"red"},{"text":" points on the leaderboard!","color":"red"}]

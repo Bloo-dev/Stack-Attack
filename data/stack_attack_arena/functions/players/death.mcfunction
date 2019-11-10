@@ -3,8 +3,9 @@
 # called by stack_attack_arena:players/leave_arena
 
 # announce to self
-execute if entity @s[tag=sat_payed_fee] run function stack_attack_arena:players/announcements/death/lost_points
-execute unless entity @s[tag=sat_payed_fee] run tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You died!","color":"red"}]
+execute if score @s sat_match_value matches 1.. run function stack_attack_arena:players/announcements/death/lost_points
+execute if score @s sat_match_value matches 1 run function stack_attack_arena:players/announcements/death/lost_point
+execute unless score @s sat_match_value matches 1.. run tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You died!","color":"red"}]
 
 # set the gamemode depending on the default_gamemode sat_data score.
 execute if score default_gamemode sat_data matches 0 run gamemode survival
