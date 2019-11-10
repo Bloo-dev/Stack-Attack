@@ -10,7 +10,7 @@ particle minecraft:block light_blue_concrete ~ ~1.0 ~ 0.4 0.8 0.4 0.2 2
 particle minecraft:block yellow_concrete ~ ~1.0 ~ 0.4 0.8 0.4 0.2 2
 
 # effect with regen and saturation
-effect give @s minecraft:regeneration 2 0 true
+effect give @s minecraft:regeneration 3 0 true
 effect give @s minecraft:saturation 2 0 true
 
 # enable join game trigger to print out lobby info if already joined players click the sign
