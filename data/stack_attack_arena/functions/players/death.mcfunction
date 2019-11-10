@@ -3,7 +3,7 @@
 # called by stack_attack_arena:players/leave_arena
 
 # announce to self
-execute if score @s sat_match_value matches 1.. run function stack_attack_arena:players/announcements/death/lost_points
+execute if score @s sat_match_value matches 2.. run function stack_attack_arena:players/announcements/death/lost_points
 execute if score @s sat_match_value matches 1 run function stack_attack_arena:players/announcements/death/lost_point
 execute unless score @s sat_match_value matches 1.. run tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You died!","color":"red"}]
 
