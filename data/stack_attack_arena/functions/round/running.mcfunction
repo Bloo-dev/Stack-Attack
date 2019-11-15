@@ -12,7 +12,10 @@ execute as @a[tag=sat_in_game,dx=14,dy=255,dz=14] run function stack_attack_aren
 execute positioned ~ 250 ~ run kill @a[tag=sat_in_game,dx=14,dy=5,dz=14]
 
 # update sat_arena_state to 3 ("ended") in case there is just one player left === WIN CONDITION ===
-execute if score players_in_arena sat_match_value matches ..1 run scoreboard players set @s sat_arena_state 3
+execute if score players_in_arena sat_match_value matches 1 run scoreboard players set @s sat_arena_state 3
+
+# handle draws
+execute if score players_in_arena sat_match_value matches 0 run function stack_attack_arena:round/draw
 
 # reset fake players
 scoreboard players reset players_in_arena sat_match_value
