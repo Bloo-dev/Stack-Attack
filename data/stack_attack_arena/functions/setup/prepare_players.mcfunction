@@ -46,3 +46,7 @@ replaceitem entity @s[scores={sat_leaderboard=43..}] armor.chest leather_chestpl
 
 # pay participation fee if player has at least 1 point
 execute if score @s sat_leaderboard matches 1.. run function stack_attack_arena:setup/pay_participation_fee
+
+# add legacy_match_value to match value (leftover points from a draw game)
+scoreboard players operation match_value sat_match_value += legacy_match_value sat_match_value
+scoreboard players reset legacy_match_value sat_match_value
