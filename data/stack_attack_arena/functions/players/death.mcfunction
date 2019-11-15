@@ -19,3 +19,5 @@ tag @s remove sat_payed_fee
 
 # reset own score
 scoreboard players reset @s sat_deaths
+scoreboard players reset @s gm4_zc_deaths
+scoreboard players reset @s gm4_undead
