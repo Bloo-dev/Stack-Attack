@@ -4,9 +4,9 @@
 # called by stack_attack_arena:round/timer
 
 # do a countdown
-execute if score @s sat_round_timer matches -3 run function stack_attack_arena:round/timer/3
-execute if score @s sat_round_timer matches -2 run function stack_attack_arena:round/timer/2
-execute if score @s sat_round_timer matches -1 run function stack_attack_arena:round/timer/1
+execute if score @s sat_round_timer matches -3 as @a[tag=sat_in_game,dx=14,dy=255,dz=14] run function stack_attack_arena:round/timer/3
+execute if score @s sat_round_timer matches -2 as @a[tag=sat_in_game,dx=14,dy=255,dz=14] run function stack_attack_arena:round/timer/2
+execute if score @s sat_round_timer matches -1 as @a[tag=sat_in_game,dx=14,dy=255,dz=14] run function stack_attack_arena:round/timer/1
 
 # end countdown, also set arena state to 2 ("running")
 execute if score @s sat_round_timer matches 0 run function stack_attack_arena:round/timer/go
