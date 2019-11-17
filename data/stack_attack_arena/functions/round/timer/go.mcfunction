@@ -2,7 +2,7 @@
 # @s = arenas with sat_arena_state 1, sat_round_timer=0
 # at @s
 # called by stack_attack_arena:round/starting
-say go
+
 # calculate point gain potential for tellraw
 scoreboard players operation match_value sat_match_value = @s sat_match_value
 

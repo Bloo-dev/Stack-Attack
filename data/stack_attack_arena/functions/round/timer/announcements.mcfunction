@@ -2,7 +2,7 @@
 # @s = players in arenas with sat_arena_state 1, sat_round_timer=0
 # at arenas with sat_arena_state 1, sat_round_timer=0
 # called by stack_attack_arena:round/timer/go
-say ran
+
 # title
 title @s title ["",{"text":"GO!","color":"blue"}]
 
