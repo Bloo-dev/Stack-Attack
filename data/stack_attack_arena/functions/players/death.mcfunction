@@ -19,3 +19,8 @@ tag @s remove sat_payed_fee
 
 # reset own score
 scoreboard players reset @s sat_deaths
+
+# compatibility with Gamemode 4
+scoreboard players reset @s gm4_undead
+scoreboard players reset @s gm4_zc_deaths
+scoreboard players remove @s ps_deaths 1
