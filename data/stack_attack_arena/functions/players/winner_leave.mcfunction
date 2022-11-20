@@ -17,5 +17,9 @@ execute if score default_gamemode sat_data matches 1 run gamemode creative
 execute if score default_gamemode sat_data matches 2 run gamemode adventure
 execute if score default_gamemode sat_data matches 3 run gamemode spectator
 
-# teleport to random lobby
-tp @e[type=marker,tag=sat_lobby_center,limit=1,sort=random]
+# teleport back to original lobby used to join
+scoreboard players operation $this_id sat_lobby_id = @s sat_lobby_id
+tag @s add sat_teleport_target
+execute as @e[type=marker,tag=sat_lobby_center] if score @s sat_lobby_id = $this_id sat_lobby_id at @s run tp @p[tag=sat_teleport_target] @s
+tag @s remove sat_teleport_target
+scoreboard players reset $this_id sat_lobby_id

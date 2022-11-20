@@ -6,8 +6,12 @@
 execute if entity @s[tag=sat_payed_fee] run function stack_attack_arena:players/announcements/death/lost_points
 execute unless entity @s[tag=sat_payed_fee] run tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You were kicked from Stack Attack!","color":"red"}]
 
-# teleport to random lobby
-tp @e[type=marker,tag=sat_lobby_center,limit=1,sort=random]
+# teleport back to original lobby used to join
+scoreboard players operation $this_id sat_lobby_id = @s sat_lobby_id
+tag @s add sat_teleport_target
+execute as @e[type=marker,tag=sat_lobby_center] if score @s sat_lobby_id = $this_id sat_lobby_id at @s run tp @p[tag=sat_teleport_target] @s
+tag @s remove sat_teleport_target
+scoreboard players reset $this_id sat_lobby_id
 
 # clear inventory
 clear @s

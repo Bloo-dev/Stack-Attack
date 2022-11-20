@@ -5,7 +5,7 @@
 
 
 # branch to all lobby markers. Handle players in or near a lobby.
-execute as @e[type=marker,tag=sat_lobby_center] at @s as @a[distance=..8] at @s run function stack_attack_lobby:area/track_players
+execute as @e[type=marker,tag=sat_lobby_center] at @s run function stack_attack_lobby:area/load_id
 
 # kick players that have left the lobby by walking away
 execute as @a[tag=sat_waiting_for_game,tag=!sat_near_lobby] run function stack_attack_lobby:queue/leave_queue_generic

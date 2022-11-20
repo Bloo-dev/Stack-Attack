@@ -5,6 +5,9 @@
 # join queue
 tag @s add sat_waiting_for_game
 
+# remember via which lobby this player joined
+scoreboard players operation @s sat_lobby_id = $this_id sat_lobby_id
+
 # click sound effect
 playsound minecraft:ui.button.click player @s ~ ~ ~ 0.2 0.4
 

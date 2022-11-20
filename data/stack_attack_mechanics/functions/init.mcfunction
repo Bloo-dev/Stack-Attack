@@ -22,6 +22,7 @@ scoreboard objectives add sat_drop_timer dummy
 scoreboard objectives add sat_random_value dummy
 scoreboard objectives add sat_health health
 scoreboard objectives add sat_sneak_time minecraft.custom:minecraft.sneak_time
+scoreboard objectives add sat_lobby_id dummy
 scoreboard objectives add sat_games_won dummy [{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":" Victories","color":"green"}]
 scoreboard objectives add sat_games_played dummy [{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":" Games Played","color":"green"}]
 
