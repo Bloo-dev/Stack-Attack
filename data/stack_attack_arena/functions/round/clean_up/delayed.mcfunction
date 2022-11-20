@@ -10,8 +10,10 @@ execute as @a[tag=sat_in_game,dx=14,dy=255,dz=14,limit=1,sort=arbitrary] at @s r
 kill @e[type=llama,dx=14,dy=255,dz=14]
 kill @e[type=item,dx=14,dy=255,dz=14]
 
-# clear blocks ===== THIS IS THE REASON WHY AN ARENA MUST BE ABOVE Y=62
-fill ~1 ~ ~1 ~13 255 ~13 air
+# clear blocks ===== THIS IS THE REASON WHY AN ARENA MUST BE BELOW Y=128
+execute store result score arena_height sat_data run data get entity @s Pos[1]
+execute unless score arena_height sat_data matches 128.. run fill ~1 ~ ~1 ~13 ~192 ~13 air
+scoreboard players reset arena_height sat_data
 
 # reset sat_match_value
 scoreboard players reset @s sat_match_value
