@@ -3,7 +3,7 @@
 # called by stack_attack_arena:powerups/check_players
 
 # clear off-hand
-replaceitem entity @s weapon.offhand air
+item replace entity @s weapon.offhand with air
 
 # clear other jump boosts (to counteract sticky feet)
 effect clear @s minecraft:jump_boost

@@ -3,7 +3,7 @@
 # called by stack_attack_arena:powerups/check_players
 
 # clear off-hand
-replaceitem entity @s weapon.offhand air
+item replace entity @s weapon.offhand with air
 
 # apply effect
 execute as @a[tag=sat_in_game,tag=!sat_self,dx=14,dy=255,dz=14] run function stack_attack_arena:powerups/apply_sticky_feet

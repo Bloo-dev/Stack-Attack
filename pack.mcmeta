@@ -1,9 +1,9 @@
 {
     "pack":{
-        "pack_format":0,
+        "pack_format":10,
         "description":"Ready, Set, Stack! A fun multiplayer minigame that fits any world!"
     },
-    "version":"snp0517",
+    "version":"snp-22_11_02-1.19",
     "credits":{
     "creator":[
       ["Bloo","https://www.twitter.com/Bluefire610"]
