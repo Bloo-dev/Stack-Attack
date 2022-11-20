@@ -18,4 +18,4 @@ execute if score default_gamemode sat_data matches 2 run gamemode adventure
 execute if score default_gamemode sat_data matches 3 run gamemode spectator
 
 # teleport to random lobby
-tp @e[type=area_effect_cloud,tag=sat_lobby_center,limit=1,sort=random]
+tp @e[type=marker,tag=sat_lobby_center,limit=1,sort=random]

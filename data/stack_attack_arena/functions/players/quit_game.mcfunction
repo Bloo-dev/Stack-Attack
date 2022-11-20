@@ -7,7 +7,7 @@ execute if entity @s[tag=sat_payed_fee] run function stack_attack_arena:players/
 execute unless entity @s[tag=sat_payed_fee] run tellraw @s ["",{"text":"["},{"text":"S","color":"yellow"},{"text":"tack ","color":"light_purple"},{"text":"A","color":"blue"},{"text":"ttack","color":"green"},{"text":"] ","color":"none"},{"text":"You were kicked from Stack Attack!","color":"red"}]
 
 # teleport to random lobby
-tp @e[type=area_effect_cloud,tag=sat_lobby_center,limit=1,sort=random]
+tp @e[type=marker,tag=sat_lobby_center,limit=1,sort=random]
 
 # clear inventory
 clear @s

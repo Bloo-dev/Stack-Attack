@@ -12,7 +12,7 @@ setblock ~ ~ ~-2 dark_oak_sign{Text1:"[{\"text\":\"S\",\"color\":\"yellow\",\"cl
 
 
 # place lobby center marker
-execute align xyz positioned ~.5 ~-.5 ~.5 run summon area_effect_cloud ~ ~1 ~ {CustomName:'"Stack Attack Lobby Center"',Tags:["sat_lobby_center"],Age:-2147483648,Duration:-1,WaitTime:-2147483648}
+execute align xyz positioned ~.5 ~-.5 ~.5 run summon marker ~ ~1 ~ {CustomName:'"Stack Attack Lobby Center"',Tags:["sat_lobby_center"]}
 execute align xyz positioned ~.5 ~-.5 ~.5 run particle minecraft:end_rod ~ ~ ~ .1 0 .1 0.05 30
 
 # print tellraw to give operators feedback / to allow them to remove the closest lobby marker.
